@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #d4d3d6;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  min-height: 100vh;
+
+  font-family: 'Segoe UI', sans-serif;
+
+  transition: background 1.0s ease;
+}
+
+.container {
+  background: white;
+
+  width: 420px;
+
+  padding: 30px;
+
+  border-radius: 5px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+  color: #111827;
+
+  transition: background 1.0s ease;
+
+  backdrop-filter: blur(8px);
+}
+
+h1 {
+  text-align: center;
+
+  margin-bottom: 25px;
+
+  font-size: 2rem;
+
+  font-weight: bold;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+
+  padding: 12px;
+
+  border-radius: 3px;
+
+  border: 1px solid #d1d5db;
+
+  background: white
+
+  color #111827;
+
+  transition: background 1.0s ease;
+}
+
+button {
+  background: #6b64748c;
+
+  color: rgb(250, 249, 249);
+
+  border: none;
+
+  padding: 10px 15px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition: all 0.9s ease;
+}
+
+ul {
+  margin-top: 20px;
+  list-style: none;
+}
+
+li {
+  background: #e4ddf1;
+
+  padding: 14px;
+
+  border-radius: 4px;
+
+  margin-bottom: 12px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  border: 1px solid #c4c2c9;
+
+  animation: fadeIn 0.3s ease;
+
+  transition: background 1.0s ease;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+li span {
+  color: #111827;
+}
+
+
+.dark-mode li span {
+  color: #d4d4d6;
+}
+
+#themeBtn {
+  background: #000000;
+
+  margin-bottom: 20px;
+}
+
+.dark-mode {
+  background: #1e1e1e;
+}
+
+.dark-mode .container {
+  background: #2c2c2c;
+  color: white;
+}
+
+.dark-mode li {
+  background: #474747;
+}
+
+.dark-mode input {
+  background: #444;
+  color: white;
+  border: none;
+}
+
+li {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .input-area {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
