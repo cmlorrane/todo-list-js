@@ -182,3 +182,45 @@ li {
     width: 100%;
   }
 }
+
+@media (max-width: 600px) {
+
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .input-area {
+    flex-direction: column;
+  }
+
+  .input-area button {
+    width: 100%;
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filters button {
+    width: 100%;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  li div {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+
+  li div button {
+    flex: 1;
+  }
+}
