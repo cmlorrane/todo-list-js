@@ -2,103 +2,220 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: #d4d3d6;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
 
   min-height: 100vh;
 
-  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  transition: background 1.0s ease;
+  background:
+    linear-gradient(
+      135deg,
+      #e9ddff,
+      #edf7ff
+    );
+
+  padding: 20px;
+
+  transition: 0.4s;
 }
 
 .container {
-  background: white;
 
-  width: 420px;
+  width: 100%;
+  max-width: 700px;
 
-  padding: 30px;
+  padding: 45px;
 
-  border-radius: 5px;
+  border-radius: 30px;
 
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.45);
 
-  color: #111827;
+  backdrop-filter: blur(20px);
 
-  transition: background 1.0s ease;
+  border: 1px solid rgba(255,255,255,0.4);
 
-  backdrop-filter: blur(8px);
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.08);
+
+  transition: 0.4s;
 }
 
 h1 {
+
   text-align: center;
 
-  margin-bottom: 25px;
+  font-size: 4rem;
 
-  font-size: 2rem;
+  margin-bottom: 35px;
 
-  font-weight: bold;
+  color: #111827;
+
+  font-weight: 700;
 }
 
-.input-area {
-  display: flex;
-  gap: 10px;
-}
+#themeBtn {
 
-input {
-  flex: 1;
+  width: 70px;
+  height: 70px;
 
-  padding: 12px;
-
-  border-radius: 3px;
-
-  border: 1px solid #d1d5db;
-
-  background: white
-
-  color #111827;
-
-  transition: background 1.0s ease;
-}
-
-button {
-  background: #6b64748c;
-
-  color: rgb(250, 249, 249);
+  border-radius: 20px;
 
   border: none;
 
-  padding: 10px 15px;
+  font-size: 1.5rem;
 
-  border-radius: 6px;
+  margin: 0 auto 30px auto;
+
+  display: block;
+
+  background: #111827;
+
+  color: white;
 
   cursor: pointer;
 
-  transition: all 0.9s ease;
+  transition: 0.3s;
+}
+
+#themeBtn:hover {
+
+  transform: scale(1.05);
+}
+
+.input-area {
+
+  display: flex;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+input {
+
+  flex: 1;
+
+  height: 65px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  padding: 0 20px;
+
+  font-size: 1.1rem;
+
+  background: rgba(255,255,255,0.75);
+
+  color: #111827;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+input::placeholder {
+
+  color: #9ca3af;
+}
+
+input:focus {
+
+  box-shadow:
+    0 0 0 4px #c4b5fd;
+}
+
+button {
+
+  border: none;
+
+  padding: 14px 18px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8b5cf6,
+      #a855f7
+    );
+
+  color: white;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+button:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 20px rgba(139,92,246,0.3);
+}
+
+#addTaskBtn {
+
+  width: 170px;
+}
+
+#taskCount {
+
+  margin-bottom: 25px;
+
+  color: #4b5563;
+
+  font-size: 1rem;
+}
+
+.filters {
+
+  display: flex;
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.filters button {
+
+  flex: 1;
+
+  height: 55px;
+
+  border-radius: 18px;
+}
+
+.filters button.active {
+
+  background:
+    linear-gradient(
+      135deg,
+      #8b5cf6,
+      #a855f7
+    );
+
+  color: white;
 }
 
 ul {
-  margin-top: 20px;
+
   list-style: none;
 }
 
 li {
-  background: #e4ddf1;
-
-  padding: 14px;
-
-  border-radius: 4px;
-
-  margin-bottom: 12px;
 
   display: flex;
 
@@ -106,121 +223,182 @@ li {
 
   align-items: center;
 
-  border: 1px solid #c4c2c9;
+  padding: 20px;
+
+  margin-bottom: 18px;
+
+  border-radius: 22px;
+
+  background: rgba(255,255,255,0.6);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.3);
+
+  transition: 0.3s;
 
   animation: fadeIn 0.3s ease;
-
-  transition: background 1.0s ease;
 }
 
-.completed {
-  text-decoration: line-through;
-  opacity: 0.6;
+li:hover {
+
+  transform: scale(1.01);
 }
 
 li span {
+
+  font-size: 1.1rem;
+
   color: #111827;
 }
 
+.completed {
 
-.dark-mode li span {
-  color: #d4d4d6;
+  text-decoration: line-through;
+
+  opacity: 0.5;
 }
 
-#themeBtn {
-  background: #000000;
+.task-buttons {
 
-  margin-bottom: 20px;
+  display: flex;
+
+  gap: 10px;
+}
+
+.task-buttons button {
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 16px;
+
+  color: white;
+
+  font-size: 1rem;
+
+  padding: 0;
+}
+
+.complete-btn {
+
+  background: #8b5cf6;
+}
+
+.edit-btn {
+
+  background: #3b82f6;
+}
+
+.delete-btn {
+
+  background: #ff5c5c;
 }
 
 .dark-mode {
-  background: #1e1e1e;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0f172a,
+      #111827
+    );
 }
 
 .dark-mode .container {
-  background: #2c2c2c;
+
+  background: rgba(17,24,39,0.55);
+
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.dark-mode h1,
+.dark-mode li span,
+.dark-mode #taskCount {
+
+  color: white;
+}
+
+.dark-mode input {
+
+  background: rgba(255,255,255,0.08);
+
   color: white;
 }
 
 .dark-mode li {
-  background: #474747;
+
+  background: rgba(255,255,255,0.06);
 }
 
-.dark-mode input {
-  background: #444;
+.dark-mode .filters button {
+
+  background: rgba(255,255,255,0.08);
+
   color: white;
-  border: none;
-}
-
-li {
-  animation: fadeIn 0.3s ease;
 }
 
 @keyframes fadeIn {
+
   from {
+
     opacity: 0;
+
     transform: translateY(-10px);
   }
 
   to {
+
     opacity: 1;
+
     transform: translateY(0);
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
+
+  h1 {
+
+    font-size: 2.5rem;
+  }
+
   .container {
-    width: 90%;
-    padding: 20px;
+
+    padding: 25px;
   }
 
   .input-area {
+
     flex-direction: column;
   }
 
-  button {
+  #addTaskBtn {
+
     width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .container {
-    width: 95%;
-    padding: 20px;
-  }
-
-  .input-area {
-    flex-direction: column;
-  }
-
-  .input-area button {
-    width: 100%;
+    height: 60px;
   }
 
   .filters {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
 
-  .filters button {
-    width: 100%;
+    flex-direction: column;
   }
 
   li {
+
     flex-direction: column;
+
     align-items: flex-start;
-    gap: 10px;
+
+    gap: 15px;
   }
 
-  li div {
+  .task-buttons {
+
     width: 100%;
-    display: flex;
-    gap: 10px;
   }
 
-  li div button {
+  .task-buttons button {
+
     flex: 1;
   }
 }
